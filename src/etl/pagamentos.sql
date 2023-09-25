@@ -1,9 +1,4 @@
 -- Databricks notebook source
-
-
-
--- COMMAND ----------
-
 --- CRIANDO A FEATURE STORE
 
 WITH tb_pedidos AS (  
@@ -77,7 +72,7 @@ tb_summary AS (
 
   FROM tb_group
 
-  GROUP BY idVendedor
+  GROUP BY 1
 
 ),
 
@@ -94,7 +89,7 @@ tb_cartao AS (
 
 )
 
-SELECT '2018-01-01' AS dtreference --- data de referencia para entendermos a fotografia do período da base
+SELECT '2018-01-01' AS dtreference, --- data de referencia para entendermos a fotografia do período da base
        t1.*,
        t2.avgQtdeParcelas,
        t2.medianQtdeParcelas,
