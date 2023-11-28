@@ -1,4 +1,6 @@
 -- Databricks notebook source
+CREATE TABLE tb_pedido
+
 WITH tb_pedido AS (
 
   SELECT DISTINCT 
